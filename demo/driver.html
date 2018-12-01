@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Delivery App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="driver.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">This can be the description</p>
+                </div>
+                <div class="col-sm-3 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="popup" onclick="myFunction()">Email us<span class="popuptext" id="myPopup"><a
+                                    href="mailto:(email)">
+        1</a>
+        <a href="mailto:(email)">
+        2</a>
+        <a href="mailto:(email)">
+        3</a></span>
+                            </div>
+                            </li>
+
+                        <!--here is sign out hyperlink-->
+                        <li><a onclick="signOutUser()" href="index.html" class="text-white">Sign out</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>XXXXXXXXXXXXX</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Take an order</h1>
+            <p class="lead text-muted">blablablablabbla</p>
+
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div id="page-info" class="row">
+
+                <!--from here is each div element.this is a demo-->
+                <!--create this element by reading the database order info-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body">
+                            <p class="card-text">This part can be a brief description of destination and time to go.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Confirm this order</button>  <!--here call onclick method remove this order info from database-->
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--to here-->
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+    </div>
+</footer>
+
+
+<!--change the code below to yours if you want to test it-->
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="assets/js/vendor/holder.min.js"></script>
+
+<script type="text/javascript" src="submit.js"></script>
+<script type="text/javascript" src="profile.js"></script>
+<script> // When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+} </script>
+
+
+</body>
+</html>

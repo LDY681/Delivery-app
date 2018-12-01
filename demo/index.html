@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Signin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<div class="form-signin">
+    <img class="mb-4" src="caricon.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+    <!--here are two text box-->
+
+    <label class="control-label co2-sm2-2" for="email">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email">
+    <label class="control-label co2-sm2-2" for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+
+    <!--here are two buttons-->
+
+    <button onclick="loginUser(); changePage();" type="button" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button onclick="createUser()" type="button" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+
+</div>
+
+<!--change the code below to yours if you want to test it-->
+<!--change the code below to yours if you want to test it-->
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDGB2g3XsSGlrMWfsb5LYRrWwcUqh7lgRI",
+        authDomain: "findarideapp.firebaseapp.com",
+        databaseURL: "https://findarideapp.firebaseio.com",
+        projectId: "findarideapp",
+        storageBucket: "",
+        messagingSenderId: "540805054758"
+    };
+    firebase.initializeApp(config);
+</script>
+
+
+<script src="login.js"></script>
+</body>
+</html>
