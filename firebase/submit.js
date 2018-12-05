@@ -50,17 +50,6 @@ function submitOrder(){
 $("#requestSubmit").click(function () {
 
 
-/*
-    $('.col-md-4:last').before('<div id="passenger01" class="col-md-4">' +
-        '<div class="card mb-4 box-shadow">' +
-        '<h2>Finding</h2>' +
-        '<div class="card-body"><p id="willbechanged01" class="card-text">This part can be a brief description of destination and time to go.</p>' +
-        '<div class="d-flex justify-content-between align-items-center">' +
-        '<div class="btn-group">' +
-        '<button id="passenger01" onclick="removeRequest(this.id)" type="button" class="btn btn-sm btn-outline-secondary">Confirm</button>' +
-        '</div><small class="text-muted">9 mins</small>' +
-        '</div></div></div></div>');
-*/
     
     submitOrder();
     document.getElementById("from02").value = "";
