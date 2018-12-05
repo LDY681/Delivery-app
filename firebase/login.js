@@ -11,15 +11,18 @@ function loginUser(userType) {
   }
   var userEmail = document.getElementById(mail).value;
   var userPass = document.getElementById(pass).value;
-  
+  var change = true;
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
     var errorCode = error.code;
+    change = false;
     var errorMessage = error.message;
     if(errorMessage != "A network error (such as timeout, interrupted connection or unreachable host) has occurred."){
       window.alert("Error: " + errorMessage);
     }
     signOutUser();
   });
+  if(change == true)
+    changePage(userType);
 }
 
 function changePage(userType) {
@@ -56,7 +59,9 @@ function createUser(userType) {
     var errorCode = error.code;
     var errorMessage = error.message;
 
-    window.alert("Error: " + errorMessage);
+    if(errorMessage != "A network error (such as timeout, interrupted connection or unreachable host) has occurred."){
+      window.alert("Error: " + errorMessage);
+    }
   });
   window.alert("Account created for " + userEmail);
   changePage(userType);

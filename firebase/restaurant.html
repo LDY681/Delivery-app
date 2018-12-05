@@ -48,6 +48,9 @@
         <p>Please fill out this form to post a delivery request.</p>
         <hr>
 
+        <label for="rname"><b>Restaurant Name</b></label>
+        <input type="text" placeholder="Restaurant Name" id="rname" required>
+
         <label for="from02"><b>Restaurant address</b></label>
         <input type="text" placeholder="Restaurant address" id="from02" required>
 
@@ -69,7 +72,7 @@
                   class="cancelbtn">Cancel
           </button>
           <button id="requestSubmit" type="button"
-                  onclick="document.getElementById('form').style.display='none'"
+                  onclick="document.getElementById('form').style.display='none';"
                   class="signupbtn">Submit
           </button>
         </div>
@@ -113,7 +116,7 @@
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="assets/js/vendor/holder.min.js"></script>
-    
+    <script src="submit.js"></script>
     
   </body>
 </html>

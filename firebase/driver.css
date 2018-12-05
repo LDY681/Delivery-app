@@ -175,7 +175,18 @@
       left: 50%;
       margin-left: -80px;
   }
-  
+
+  .database-table {
+      margin-left: auto;
+      margin-right: auto;
+      
+  }
+ 
+  table, th, td{
+      border: 1px gray;
+      text-align: center;
+  }
+
   /* Popup arrow */
   .popup .popuptext::after {
       content: "";
@@ -193,6 +204,7 @@
       visibility: visible;
       -webkit-animation: fadeIn 1s;
       animation: fadeIn 1s;
+      width: 180px;
   }
   
   /* Add animation (fade in the popup) */
