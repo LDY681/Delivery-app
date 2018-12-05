@@ -52,6 +52,7 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  margin-left: -80px;
 }
 
 .nav-masthead .nav-link {
