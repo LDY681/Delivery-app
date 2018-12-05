@@ -11,9 +11,16 @@
 
     <!-- Custom styles for this template -->
     <link href="driver.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    
+    <script type="text/javascript">    
+        setInterval(function(){
+            window.location.reload();
+        }, 5*60000); //NOTE: period is passed in milliseconds
+    </script>
 </head>
 
-<body>
+<body onload="display();">
 
 <header>
     <div class="collapse bg-dark" id="navbarHeader">
@@ -34,7 +41,7 @@
                             </li>
 
                         <!--here is sign out hyperlink-->
-                        <li><a onclick="signOutUser()" href="index.html" class="text-white">Sign out</a></li>
+                        <li><a onclick="signOutUser()" href="index.html" text-white">Sign out</a></li>
 
 
                     </ul>
@@ -58,81 +65,44 @@
 <main role="main">
 
     <section class="jumbotron text-center">
-        <div class="container">
+        <div class="container" >
             <h1 class="jumbotron-heading">Choose an order</h1>
             <table class="database-table" >
                 <thead><tr>
-                    <th>&nbsp;&nbsp;Restaurant Name&nbsp;&nbsp;</th>
                     <th>&nbsp;&nbsp;Time Ordered&nbsp;&nbsp;</th>
+                    <th>&nbsp;&nbsp;Restaurant Name&nbsp;&nbsp;</th>
                     <th>&nbsp;&nbsp;Pickup Location&nbsp;&nbsp;</th>
                     <th>&nbsp;&nbsp;Destination&nbsp;&nbsp;</th>
-                    <th>&nbsp;&nbsp;Payment&nbsp;&nbsp;</th>
                 </tr></thead>
-                <tr><th colspan=5><hr></th></tr>
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                </tr>
+                <tr><th colspan=4><hr></th></tr>
+                <tbody id="table-body">
+                
                 </tbody>
             </table>
         </div>
     </section>
 
-    <div class="album py-5 bg-light">
-        <div class="container">
-
-            <div id="page-info" class="row">
-
-                <!--from here is each div element.this is a demo-->
-                <!--create this element by reading the database order info-->
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-body">
-                            <p class="card-text">The order user chose</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Confirm this order</button>  <!--here call onclick method remove this order info from database-->
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--to here-->
-            </div>
-        </div>
-    </div>
+    
 
 </main>
 
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-    </div>
-</footer>
 
 
 <!--change the code below to yours if you want to test it-->
 
 <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyBbri7D2ax0Se_nPwPt_nat70T61rsYxbc",
-          authDomain: "restuarant-delivery.firebaseapp.com",
-          databaseURL: "https://restuarant-delivery.firebaseio.com",
-          projectId: "restuarant-delivery",
-          storageBucket: "restuarant-delivery.appspot.com",
-          messagingSenderId: "538676791829"
-        };
-        firebase.initializeApp(config);
-    </script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBbri7D2ax0Se_nPwPt_nat70T61rsYxbc",
+        authDomain: "restuarant-delivery.firebaseapp.com",
+        databaseURL: "https://restuarant-delivery.firebaseio.com",
+        projectId: "restuarant-delivery",
+        storageBucket: "restuarant-delivery.appspot.com",
+        messagingSenderId: "538676791829"
+    };
+    firebase.initializeApp(config);
+</script>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -146,13 +116,14 @@
 <script src="assets/js/vendor/holder.min.js"></script>
 
 <script type="text/javascript" src="submit.js"></script>
-<script type="text/javascript" src="profile.js"></script>
 <script> // When the user clicks on div, open the popup
 function myFunction() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
 } </script>
 
+<script src="driver.js"></script>
+<script src="login.js"></script>
 
 </body>
 </html>
