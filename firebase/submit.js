@@ -1,22 +1,3 @@
-var numOrders = 0;
-
-
-function removeOffer(clickedID) {
-    var div = document.getElementById(clickedID);
-    if (div) {
-        div.parentNode.removeChild(div);
-    }
-    numbersOfOffers--;
-}
-
-function removeRequest(clickedID) {
-    var div = document.getElementById(clickedID);
-    if (div) {
-        div.parentNode.removeChild(div);
-    }
-    numbersOfRequests--;
-}
-
 function submitOrder(){
     var rname = document.getElementById("rname").value;
     var rest = document.getElementById("from02").value;
@@ -41,10 +22,6 @@ function submitOrder(){
     window.alert("Success! Your order for delivery has been placed.");
     console.log(rname+" "+rest + " " + dest + " " + rphone + " " + custphone +" "+custname);
 }
-
-
-
-
 
 
 $("#requestSubmit").click(function () {

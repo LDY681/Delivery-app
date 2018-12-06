@@ -33,6 +33,8 @@ body {
 
 .signin button {
   color: cadetblue;
+    height: 40px;
+    width: 100px;
 }
 
 .tab button:hover {
